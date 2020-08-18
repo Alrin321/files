@@ -1,0 +1,26 @@
+#include<stdio.h>
+void main()
+{
+
+	FILE* fm = fopen("C:\Users\user\Desktop\\marksn.txt","w");
+	FILE* fw = fopen("datan.txt","w");
+
+	struct markstru
+	{
+		int roll;
+		char name[20];
+		float t1;
+		float t2;
+		float a1;
+		float tot;
+	} marks;
+
+
+
+	while (fread(&marks, sizeof(marks),1,fm)>0)
+    	fwrite(&marks, sizeof(marks),1,fw);
+
+//   fputc('\n',fw);
+	fclose(fm);
+	fclose(fw);
+}
