@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+
+void main()
+{
+   int n, num[n],i;  /*declaring variables*/
+   double sum=0,avg=0;
+   printf("\nEnter the no of seals"); /*asking to enter the number*/
+   scanf("%d",&n);
+   printf("\nEnter the weights");  /*entering the weights*/
+   for(i=0;i<n;i++)
+  {
+      scanf("%d",&num[i]);
+      sum+=num[i];
+  }
+    avg=sum/i;
+    printf("the average weight is %lf",avg);/*displaying average weight*/
+}
